@@ -1,7 +1,12 @@
-const { Octokit } = require("@octokit/rest");
-require('dotenv').config();
+let Octokit;
 
 exports.handler = async function(event, context) {
+  // Dynamic import of Octokit
+  const { Octokit: OctokitClass } = await import("@octokit/rest");
+  Octokit = OctokitClass;
+  
+  require('dotenv').config();
+
   if (event.httpMethod !== "POST") {
     return { 
       statusCode: 405, 
@@ -16,30 +21,29 @@ exports.handler = async function(event, context) {
 
     const { projeto } = JSON.parse(event.body);
 
-    // Busca o arquivo atual de projetos
     let projetos = [];
+    let fileData;
+    
     try {
-      const { data: fileData } = await octokit.repos.getContent({
+      const response = await octokit.repos.getContent({
         owner: process.env.GITHUB_OWNER,
         repo: process.env.GITHUB_REPO,
         path: 'projetos.json'
       });
-
+      
+      fileData = response.data;
       const content = Buffer.from(fileData.content, 'base64').toString();
       projetos = JSON.parse(content);
     } catch (error) {
-      // Se o arquivo não existir, começamos com um array vazio
       console.log('Arquivo não encontrado, criando novo');
     }
 
-    // Adiciona o novo projeto
     projetos.push({
       ...projeto,
       id: Date.now(),
       dataCriacao: new Date().toISOString()
     });
 
-    // Atualiza ou cria o arquivo
     await octokit.repos.createOrUpdateFileContents({
       owner: process.env.GITHUB_OWNER,
       repo: process.env.GITHUB_REPO,

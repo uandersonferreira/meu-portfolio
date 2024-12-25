@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de cadastro de projetos de portfólio">
+    <title>Cadastro de Projetos</title>
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/fontawesome.min.css" integrity="sha512-lauN4D/0AgFUGvmMR+knQnbOADyD/XuQ8VF18I8Ll0+TLvsujshyxvU+uzogmQbSq6qJd5jnUdYtK8ShxXMlSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="page-title">Cadastro de Novo Projeto</h1>
+        </header>
+
+        <main class="form-section">
+            <form  method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Informações do Projeto</legend>
+                    
+                    <div class="form-group">
+                        <label for="titulo">Título do Projeto</label>
+                        <input 
+                            type="text" 
+                            id="titulo" 
+                            name="titulo" 
+                            required 
+                            aria-required="true"
+                            placeholder="Digite o título do projeto"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descricao">Descrição do Projeto</label>
+                        <textarea 
+                            id="descricao" 
+                            name="descricao" 
+                            rows="6" 
+                            required 
+                            aria-required="true"
+                            placeholder="Descreva seu projeto"
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status do Projeto</label>
+                        <select id="status" name="status" required aria-required="true">
+                            <option value="">Selecione um status</option>
+                            <option value="pendente">Pendente</option>
+                            <option value="em-andamento">Em andamento</option>
+                            <option value="concluido">Concluído</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="imagem">Imagem de Capa do Projeto</label>
+                        <div class="file-input-wrapper">
+                            <label class="file-input-label" for="imagem">
+                                Escolher arquivo
+                            </label>
+                            <input 
+                                type="file" 
+                                id="imagem" 
+                                name="imagem" 
+                                accept="image/*"
+                                aria-label="Selecione uma imagem de capa"
+                            >
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tecnologias Utilizadas</legend>
+                    <div class="tecnologias-container">
+                        <div class="form-group">
+                            <label for="nome-tecnologia">Nome da Tecnologia</label>
+                            <input 
+                                type="text" 
+                                id="nome-tecnologia" 
+                                placeholder="Digite o nome da tecnologia"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="imagem-tecnologia">Ícone da Tecnologia</label>
+                            <div class="file-input-wrapper">
+                                <label class="file-input-label" for="imagem-tecnologia">
+                                    Escolher ícone
+                                </label>
+                                <input 
+                                    type="file" 
+                                    id="imagem-tecnologia" 
+                                    accept="image/*"
+                                    aria-label="Selecione um ícone para a tecnologia"
+                                >
+                            </div>
+                        </div>
+
+                        <button type="button" id="add-tecnologia" class="btn btn-secondary">
+                            <span class="icon"> <i class="fa-solid fa-plus"> </i> </span> Adicionar Tecnologia
+                        </button>
+                    </div>
+
+                    <ul id="lista-tecnologias" class="tecnologias-lista" aria-label="Lista de tecnologias adicionadas"></ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Links do Projeto</legend>
+                    <div class="form-group">
+                        <label for="url-deploy">URL de Deploy</label>
+                        <input 
+                            type="url" 
+                            id="url-deploy" 
+                            name="url-deploy" 
+                            placeholder="https://exemplo.com"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="url-github">Link do Código no GitHub</label>
+                        <input 
+                            type="url" 
+                            id="url-github" 
+                            name="url-github" 
+                            placeholder="https://github.com/usuario/repositorio"
+                        >
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn btn-primary">Cadastrar Projeto</button>
+            </form>
+        </main>
+    </div>
+
+
+    <script src="assets/js/cadastro.js"> </script>
+
+</body>
+</html>
