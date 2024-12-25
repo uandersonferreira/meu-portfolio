@@ -1,0 +1,829 @@
+@charset "UTF-8";
+/* Importa as fontes do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@100;200;300;700;900&display=swap");
+
+/* Define estilos básicos para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth; /* Suaviza o scroll da página */
+}
+
+:root {
+  --blue-01: #0063e5;
+  --blue-02: #032c77;
+  --blue-03: #08132f;
+  --blue-04: #040714;
+  --blue-05: #090b13;
+
+  --black: #000;
+  --black-01: #1e1e24;
+  --black-02: rgb(4, 5, 5);
+  --eerie-black: #191919;
+
+  --cinnabar: #e94f37;
+  --carrot-orange: #f49d37;
+  --icterine: #fffd82;
+  --red-destaque: #ff0157;
+  --white: #fff;
+  --bg-color-01: #f4f4f4;
+  --bg-color-02: #fcf7f7b4;
+}
+
+/* Define o peso da fonte para parágrafos */
+p {
+  font-weight: 300;
+}
+
+/* Estiliza a seção do banner */
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/banner-home.jpg); /* Usa uma imagem de fundo */
+  background-size: cover; /* Cobre toda a área do banner */
+}
+
+/* Estiliza o conteúdo do banner */
+.banner .content {
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Estiliza o título no banner */
+.banner .content h2 {
+  font-size: 5em;
+  color: var(--white);
+}
+
+/* Estiliza o parágrafo no banner */
+.banner .content p {
+  font-size: 1em;
+  color: var(--white);
+}
+
+/* Estiliza o botão */
+.btn {
+  font-size: 1em;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+/* Estilos específicos para cada botão */
+.btn-projects {
+  background-color: var(--red-destaque); /* Azul para projetos */
+}
+
+.btn-linkedin {
+  background-color: #0077b5; /* Azul para LinkedIn */
+}
+
+.btn-github {
+  background-color: #333; /* Cinza escuro para GitHub */
+}
+
+.btn-whatsapp {
+  background-color: #25d366; /* Verde para WhatsApp */
+}
+
+
+/* Estilo para o hover do botão */
+.btn:hover {
+  letter-spacing: 4px;
+}
+
+/* Estiliza o cabeçalho */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+
+/* Estilo para o cabeçalho quando a página é rolada */
+header.sticky {
+  background: var(--white);
+  padding: 10px 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Estiliza o logo no cabeçalho */
+header .logo {
+  color:  var(--white);
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+/* Muda a cor do logo quando o cabeçalho é rolado */
+header.sticky .logo {
+  color: var(--black-02);
+}
+
+/* Estilo para o span no logo */
+header .logo span {
+  color:  var(--red-destaque);
+}
+
+/* Estiliza a navegação no cabeçalho */
+header .navigation {
+  position: relative;
+  display: flex;
+}
+
+/* Estiliza os itens da navegação */
+header .navigation li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+/* Estiliza os links na navegação */
+header .navigation li a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 300;
+}
+
+
+
+
+/* Muda a cor dos links quando o cabeçalho é rolado */
+header.sticky .navigation li a {
+  color: #111;
+}
+
+header .navigation li a.link-destaque:hover{
+  font-weight: 600;
+  border: 2px solid var(--red-destaque);
+  padding: 8px;
+}
+
+
+
+/* Estilo para a seção Sobre */
+.about {
+  padding: 100px 0; /* Define padding superior e inferior */
+  background-color: #f4f4f4; /* Define a cor de fundo */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+
+}
+
+/* Estilo para as colunas dentro da seção Sobre */
+.about-col-left{
+  width: 40%; /* Define a largura das colunas */
+  margin: 0;
+
+}
+.about-col-right {
+  width: 55%; /* Define a largura das colunas */
+  margin-bottom: 20px; /* Adiciona margem inferior */
+}
+
+/* Estilo para as imagens dentro da seção Sobre */
+.about-img-bx {
+  width: 100%; /* Define a largura das caixas de imagem */
+  text-align: center; /* Centraliza as imagens */
+}
+
+/* Estilo para as imagens */
+.about-img-bx img {
+  width: 80%; /* Define a largura das imagens */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+}
+
+/* Estilo para a linha */
+.about-row {
+  display: flex; /* Utiliza flexbox para layout */
+  flex-wrap: wrap; /* Permite quebra de linha para responsividade */
+  align-items: center; /* Centraliza os itens verticalmente */
+  gap: 10px;
+}
+
+
+/* Estilo para os títulos */
+.about-title-text {
+  color: #111; /* Define a cor do texto */
+  font-size: 2em; /* Define o tamanho da fonte */
+  font-weight: 300; /* Define o peso da fonte */
+  margin-bottom: 20px; /* Adiciona margem inferior */
+}
+
+/* Estilo para os spans nos títulos */
+.about-title-text span {
+  color: var(--red-destaque); /* Define a cor do texto */
+  font-weight: 700; /* Define o peso da fonte */
+  font-size: 1.5em; /* Define o tamanho da fonte */
+}
+
+/* Estilo para os parágrafos */
+.about p {
+  font-size: 1em; /* Define o tamanho da fonte */
+  color: #333; /* Define a cor do texto */
+  line-height: 1.6; /* Define a altura da linha */
+  margin-bottom: 10px; /* Adiciona margem inferior */
+}
+
+/* Sobre fim */
+
+
+
+/* SCROLL DE ROLAGEM DAS TECNOLOGIAS */
+
+
+/* Define uma animação chamada 'slide' que move os elementos de sua 
+posição inicial (translateX(0)) para -100% ao longo do tempo */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Define a div com a classe 'logos':
+    - overflow: hidden esconde qualquer conteúdo que ultrapasse as bordas do elemento
+    - padding: 60px em cima e embaixo, 0 nas laterais
+    - white-space: nowrap impede a quebra de linha dentro do elemento
+    - background: white define a cor de fundo como branco
+    - position: relative para permitir a posição absoluta de elementos filhos */
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  white-space: nowrap;
+  position: relative;
+  background-color: var(--white);
+}
+
+
+/* Define pseudo-elementos antes e depois da div 'logos':
+    - position: absolute para posicioná-los relativamente ao elemento pai
+    - top: 0 posiciona-os no topo do elemento pai
+    - width: 250px define a largura dos pseudo-elementos
+    - height: 100% define a altura como igual à altura do elemento pai
+    - content: "" cria os pseudo-elementos
+    - z-index: 2 coloca-os acima do conteúdo da div 'logos' */
+.logos::before,
+.logos::after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+
+/* Define o pseudo-elemento ::before à esquerda:
+    - left: 0 posiciona-o na extremidade esquerda do elemento pai
+    - background: linear-gradient(to left,rgba(255,255,255,0), white) cria um gradiente
+     que vai de transparente a branco da esquerda para a direita */
+.logos::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+
+/* Define o pseudo-elemento ::after à direita:
+    - right: 0 posiciona-o na extremidade direita do elemento pai
+    - background: linear-gradient(to right,rgba(255,255,255,0), white) cria um gradiente
+     que vai de transparente a branco da direita para a esquerda */
+.logos::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+
+/* Define a div com a classe 'logos-slide':
+    - display: inline-block para permitir margens horizontais sem quebras de linha
+    - animation: 15s slide infinite linear aplica a animação 'slide' por 15 segundos
+    em um loop infinito e com um movimento linear */
+.logos-slide {
+  display: inline-block;
+  animation: 20s slide infinite linear;
+}
+
+/* Define as imagens dentro da classe 'logos-slide':
+    - height: 50px define a altura das imagens
+    - margin: 0 40px aplica margens horizontais de 40px e margens verticais de 0 */
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+
+}
+
+/* Regras existentes para desktop */
+@media (hover: hover) {
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+}
+
+/* Novas regras para mobile */
+@media (hover: none) {
+  .logos {
+    cursor: pointer;
+  }
+  
+  .logos.paused .logos-slide {
+    animation-play-state: paused;
+  }
+}
+
+
+
+/* FIM DO SCROLL DE ROLAGEM DAS TECNOLOGIAS */
+
+
+/* Estilo para a seção de projetos */
+
+.projetos {
+  padding: 60px 100px; /* Define padding superior e inferior */
+  background-color: #f4f4f4; /* Define a cor de fundo */
+}
+
+/* Estilo para o container de projetos */
+.projetos_container {
+  display: flex; /* Utiliza flexbox para layout */
+  justify-content: space-between; /* Espaça as colunas igualmente */
+  flex-wrap: wrap; /* Permite quebra de linha para responsividade */
+  align-items: flex-start; /* Alinha os itens no início */
+
+  padding: 24px;
+  margin-top: 20px;
+
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+
+}
+
+/* Estilo para as colunas de projetos */
+.projetos_col_left, .projetos_col_right {
+  width: 48%; /* Define a largura das colunas */
+  margin-bottom: 20px; /* Adiciona margem inferior */
+}
+
+/* Estilo para as imagens de projeto */
+.projeto_img {
+  width: 100%; /* Define a largura das imagens */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+/* Estilo para o container de logos de projeto */
+.projeto_logos {
+  display: flex; /* Utiliza flexbox para layout */
+  flex-wrap: wrap; /* Permite quebra de linha para responsividade */
+  gap: 10px; /* Define o espaçamento entre os logos */
+  margin-top: 10px; /* Adiciona margem superior */
+  justify-content: center; /* Centraliza os logos */
+}
+
+/* Estilo para as logos de projeto */
+.projeto_logos img {
+  width: 40px; /* Define a largura das logos */
+  height: 40px; /* Define a altura das logos */
+  object-fit: cover; /* Mantém a proporção das logos */
+}
+
+/* Estilo para o título do projeto */
+.projeto_titulo {
+  font-size: 2em; /* Define o tamanho da fonte */
+  font-weight: 600; /* Define o peso da fonte */
+  margin-bottom: 20px; /* Adiciona margem inferior */
+  color: #333; /* Define a cor do texto */
+}
+
+/* Estilo para os botões de projeto */
+.projeto_btn {
+  display: inline-block; /* Define o display como inline-block */
+  padding: 10px 20px; /* Define o padding dos botões */
+  margin-top: 20px; /* Adiciona margem superior */
+  margin-right: 10px; /* Adiciona margem à direita */
+  background-color: var(--blue-01); /* Define a cor de fundo */
+  color: #fff; /* Define a cor do texto */
+  text-decoration: none; /* Remove a decoração do texto */
+  border-radius: 5px; /* Adiciona bordas arredondadas */
+  transition: background-color 0.3s; /* Adiciona transição */
+}
+
+.projeto_btn:hover {
+  background-color: var(--blue-02); /* Muda a cor de fundo no hover */
+}
+
+/* Estilo para a paginação */
+.pagination {
+  display: flex; /* Utiliza flexbox para layout */
+  justify-content: center; /* Centraliza os itens */
+  margin-top: 20px; /* Adiciona margem superior */
+}
+
+.pagination_item {
+  margin: 0 5px; /* Define a margem entre os itens */
+  padding: 10px 15px; /* Define o padding dos itens */
+  background-color: #ddd; /* Define a cor de fundo */
+  color: #333; /* Define a cor do texto */
+  text-decoration: none; /* Remove a decoração do texto */
+  border-radius: 5px; /* Adiciona bordas arredondadas */
+  transition: background-color 0.3s; /* Adiciona transição */
+}
+
+.pagination_item:hover {
+  background-color: #bbb; /* Muda a cor de fundo no hover */
+}
+
+.pagination_active {
+  background-color: var(--blue-01); /* Define a cor de fundo do item ativo */
+  color: #fff; /* Define a cor do texto do item ativo */
+}
+
+.pagination_prev, .pagination_next {
+  font-weight: bold; /* Define o peso da fonte */
+}
+
+.status{
+  display: flex;
+  justify-content: right;
+  margin-top: 16px;
+}
+
+.status > p{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.status > p > span{
+  color: #002ab3;
+}
+
+/* Estilo para a seção de projetos FIM */
+
+
+/* Estilo para a seção de contato INICIO */
+
+.contato {
+  padding: 30px 100px; /* Define padding superior e inferior */
+  background-color: #f4f4f4; /* Define a cor de fundo */
+  text-align: center; /* Centraliza o texto */
+  gap: 8px;
+}
+
+/* Estilo para o título da seção */
+.titulo {
+  font-size: 2.5em; /* Define o tamanho da fonte */
+  color: #333; /* Define a cor do texto */
+  margin-bottom: 50px; /* Adiciona margem inferior */
+}
+
+/* Estilo para o container da seção de contato */
+.contato_container {
+  display: flex; /* Utiliza flexbox para layout */
+  justify-content: space-between; /* Espaça as colunas igualmente */
+  flex-wrap: wrap; /* Permite quebra de linha para responsividade */
+  align-items: flex-start; /* Alinha os itens no início */
+}
+
+/* Estilo para as colunas do mapa e formulário */
+.mapa_e_formulario {
+  width: 100%; /* Define a largura como 100% */
+  display: flex; /* Utiliza flexbox para layout */
+  flex-wrap: wrap; /* Permite quebra de linha para responsividade */
+  justify-content: space-between; /* Espaça os itens igualmente */
+}
+
+/* Estilo para o container do mapa */
+.mapa_container {
+  width: 48%; /* Define a largura do mapa */
+  margin-bottom: 20px; /* Adiciona margem inferior */
+}
+
+.mapa_container iframe{
+  width: 100%;
+  height: 90%;
+}
+/* Estilo para o formulário de contato */
+.formulario_contato {
+  width: 48%; /* Define a largura do formulário */
+  margin-bottom: 20px; /* Adiciona margem inferior */
+}
+
+/* Estilo para a informação de contato */
+.contato_info {
+  margin-bottom: 20px; /* Adiciona margem inferior */
+}
+
+.contato_item {
+  display: flex; /* Utiliza flexbox para layout */
+  align-items: center; /* Alinha os itens ao centro */
+  margin-bottom: 10px; /* Adiciona margem inferior */
+  color: #333; /* Define a cor do texto */
+  text-decoration: none; /* Remove a decoração do texto */
+}
+
+.contato_item:hover {
+  color: var(--blue-01); /* Muda a cor no hover */
+}
+
+.contato_icone {
+  margin-right: 10px; /* Adiciona margem à direita */
+  font-size: 1.5em; /* Define o tamanho da fonte */
+}
+
+/* Estilo para o separador */
+.contato_separador {
+  margin: 20px 0; /* Define margem superior e inferior */
+  border: 0; /* Remove a borda padrão */
+  height: 1px; /* Define a altura */
+  background-color: #ddd; /* Define a cor de fundo */
+}
+
+/* Estilo para o formulário */
+.form_group {
+  margin-bottom: 15px; /* Adiciona margem inferior */
+  text-align: start;
+}
+
+.form_input {
+  width: 100%; /* Define a largura como 100% */
+  padding: 10px; /* Define o padding */
+  border: 1px solid #ddd; /* Define a borda */
+  border-radius: 5px; /* Adiciona bordas arredondadas */
+  box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+}
+
+
+.form_botao {
+  display: inline-block; /* Define o display como inline-block */
+  padding: 10px 20px; /* Define o padding */
+  background-color: var(--blue-01); /* Define a cor de fundo */
+  color: #fff; /* Define a cor do texto */
+  text-decoration: none; /* Remove a decoração do texto */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Adiciona bordas arredondadas */
+  cursor: pointer; /* Adiciona o cursor pointer */
+  transition: background-color 0.3s; /* Adiciona transição */
+}
+
+.form_botao:hover {
+  background-color: var(--blue-02); /* Muda a cor de fundo no hover */
+}
+
+/* Estilo para a seção de contato FIM */
+
+
+/* Estiliza o texto de direitos autorais */
+.copyrightText {
+  padding: 8px 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Estiliza o parágrafo no texto de direitos autorais */
+.copyrightText p {
+  color: #333;
+}
+
+/* Estiliza os links no texto de direitos autorais */
+.copyrightText a {
+  color:  var(--blue-01);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+/* COMEÇO DA RESPONSIVIDADE */
+
+/* Estilizações para telas menores que 991px */
+@media (max-width: 991px) {
+  header, header.stiky {
+    padding: 10px 20px;
+  }
+
+  header .navigation {
+    display: none;
+  }
+
+  header .navigation.active {
+    width: 100%;
+    height: calc(100% - 68px);
+    position: fixed;
+    top: 68px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+  }
+
+  header .navigation li {
+    margin-left: 0;
+  }
+
+  header .navigation li a {
+    color: #111;
+    font-size: 1.6em;
+  }
+
+  .menuToggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/menu-hamburguer.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    margin-right: 42px;
+  }
+
+  .menuToggle.active {
+    background-image: url(../img/menu-close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  header.sticky .menuToggle {
+    filter: invert(1);
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .banner .content h2 {
+    font-size: 3em;
+    color: var(--white);
+    margin-top: 42px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .row .col50 {
+    position: relative;
+    width: 100%;
+  }
+
+  .row .col50 .imgBx {
+    height: 300px;
+    margin-top: 20px;
+  }
+
+  .menu .content {
+    margin-top: 20px;
+  }
+
+  .menu .content .box {
+    margin: 10px;
+  }
+
+  .menu .content .box .imgBx {
+    height: 260px;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .titletext {
+    font-size: 1.7em;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 300;
+  }
+
+  .testimonials .content .box {
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .contactForm {
+    padding: 35px 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .status {
+    justify-content: left;
+  }
+}
+
+/* Responsividade about*/
+@media (max-width: 768px) {
+  .about-col-left, .about-col-right {
+      width: 85%; /* Define a largura das colunas como 100% em telas menores */
+  }
+  
+  .about-row {
+      flex-direction: column; /* Alinha as colunas em coluna em telas menores */
+  }
+
+
+  /* Responsividade dos projetos  */
+  .projetos {
+    padding: 32px; /* Define padding superior e inferior */
+    background-color: #f4f4f4; /* Define a cor de fundo */
+  }
+
+  .projetos_col_left, .projetos_col_right {
+      width: 100%; /* Define a largura das colunas como 100% em telas menores */
+  }
+  
+  .projetos_container {
+      flex-direction: column; /* Alinha as colunas em coluna em telas menores */
+  }
+  
+  .projeto_logos img {
+      width: 30px; /* Define a largura das logos em telas menores */
+      height: 30px; /* Define a altura das logos em telas menores */
+  }
+
+  /* Responsividade Contatos */
+  .contato {
+    padding: 24px 16px; /* Define padding superior e inferior */
+    background-color: #f4f4f4; /* Define a cor de fundo */
+    text-align: center; /* Centraliza o texto */
+}
+  .mapa_container, .formulario_contato {
+    width: 95%; /* Define a largura como 100% em telas menores */
+  }
+
+  .contato_container {
+      flex-direction: column; /* Alinha as colunas em coluna em telas menores */
+      align-items: flex-start;
+    }
+
+    .form_group{
+      text-align: start;
+    }
+
+
+}
+
+/* Estilizações para telas menores que 420px */
+@media (max-width: 420px) {
+  .banner .content h2 {
+    font-size: 2.2em;
+    color: var(--white);
+    
+  }
+}
+
+/* Estilizações para telas menores que 390px */
+@media (max-width: 390px) {
+  .projeto_btn{
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .pagination_item {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 5px;
+  }
+
+
+  header .navigation {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid yellow;
+  }
+
+  header .navigation li:hover {
+    border: none;
+  }
+
+  .menuToggle {
+    margin-right: 10px;
+  }
+
+  header .navigation ul {
+    margin-left: 0;
+  }
+
+
+}
+

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Adicione ao seu HTML -->
+  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+  <title>Uanderson Ferreira de Oliveira</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo">Uanderson <span>.</span></a>
+    <div class="menuToggle" onclick="toggleMenu();"></div>
+    <!-- Ícone para abrir/fechar o menu -->
+    <ul class="navigation">
+      <li><a class="link-destaque" href="#banner" onclick="toggleMenu();">Home</a></li>
+      <li><a class="link-destaque" href="#sobre" onclick="toggleMenu();">Sobre</a></li>
+      <li><a class="link-destaque" href="#projetos" onclick="toggleMenu();">Projetos</a></li>
+      <li><a class="link-destaque" href="#contato" onclick="toggleMenu();">Contato</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section class="banner" id="banner">
+      <div class="content">
+        <h2>Desenvolvedor Backend Java</h2>
+        <p>
+          Sou um entusiasta da tecnologia no início da carreira, sempre
+          buscando aprender e me desenvolver. Com uma curiosidade incessante e
+          paixão por resolver problemas, estou trilhando o caminho para ser um
+          Desenvolvedor Backend Java. Se você procura alguém motivado, curioso
+          e pronto para desafios, você está no lugar certo! 🚀
+        </p>
+        <a href="#projetos" class="btn btn-projects"><i class="fa-solid fa-glasses"></i> Visualizar Projetos</a>
+        <a href="https://www.linkedin.com/in/uandersonferreira" target="_blank" class="btn btn-linkedin"><i
+            class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+        <a href="https://github.com/uandersonferreira" target="_blank" class="btn btn-github"><i
+            class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://api.whatsapp.com/send?phone=63992701231" target="_blank" class="btn btn-whatsapp"><i
+            class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- Sobre INICIO -->
+    <section class="about" id="sobre">
+      <div class="about-row">
+        <aside class="about-col-left">
+          <div class="about-img-bx">
+            <img src="assets/img/profile.png"
+              alt="Imagem de um jovem de 22 anos sorrindo com um fundo verde e camiseta gola polo azul" />
+          </div>
+        </aside>
+        <article class="about-col-right">
+          <h2 class="about-title-text">#<span>S</span>obre mim 🚀</h2>
+          <p>
+            Sou um jovem de 22 anos, crescido numa cidade pequena do estado de
+            Minas Gerais e que se mudou para o Tocantins em 2018 com minha
+            família.
+          </p>
+          <p>
+            Meu interesse por tecnologia surgiu quando ganhei uma bolsa de
+            estudo e tive a oportunidade de fazer um curso técnico em
+            informática no início do ensino médio. Gostei muito de programação
+            e, incentivado pela minha família e professora, resolvi aplicar
+            para uma faculdade. Fui aprovado e decidi me mudar para Palmas
+            para estudar programação.
+          </p>
+          <p>
+            Mudando sozinho, consegui um emprego e lidei com tudo de forma
+            independente, mas sempre contando com o apoio da minha mãe. Hoje,
+            estou prestes a finalizar a faculdade de Sistemas para a Internet
+            pelo IFTO, com previsão de formação em 2024, e estou buscando uma
+            posição no mercado de trabalho na área de tecnologia, como
+            estagiário ou desenvolvedor Java júnior.
+          </p>
+          <p>
+            Meus interesses e hobbies 🎸💻🎶📚🏐 incluem programação, música,
+            mangás, anime e vôlei.
+          </p>
+        </article>
+      </div>
+    </section>
+    <!-- Sobre FIM -->
+
+    <!-- carrosel infinito das logos INICIO-->
+    <section class="logos">
+      <div class="logos-slide">
+        <img src="assets/img/logos/angular-svgrepo-com.svg" alt="Logo da tecnologia Angular" title="Angular" />
+
+        <img src="assets/img/logos/css-3-svgrepo-com.svg" alt="Logo da tecnologia CSS3" title="CSS3" />
+
+        <img src="assets/img/logos/docker-logo-svgrepo-com.svg" alt="Logo da tecnologia Docker" title="Docker" />
+
+        <img src="assets/img/logos/gnu-linux-svgrepo-com.svg" alt="Logo Do sistema operacional Linux"
+          title="Linux OS" />
+
+        <img src="assets/img/logos/hibernate-svgrepo-com.svg" alt="Logo da tecnologia Hibernate implementação do JPA"
+          title="Hibernate" />
+
+        <img src="assets/img/logos/html-5-svgrepo-com.svg" alt="Logo da tecnologia HTML5" title="HTML5" />
+
+        <img src="assets/img/logos/java-logo-svgrepo-com.svg" alt="Logo da tecnologia Java" title="Java" />
+
+        <img src="assets/img/logos/javascript-svgrepo-com.svg" alt="Logo da tecnologia JavaScript" title="JavaScript" />
+
+        <img src="assets/img/logos/postgresql-svgrepo-com.svg" alt="Logo do database PostgreSQL" title="PostgreSQL" />
+
+        <img src="assets/img/logos/spring-svgrepo-com.svg" alt="Logo da tecnologia Spring" title="Ecossistema Spring" />
+      </div>
+    </section>
+    <!-- carrosel infinito das logos FIM-->
+
+    <!-- Projetos INICIO -->
+    <section class="projetos" id="projetos">
+      <h2 class="about-title-text">#<span>M</span>eus projetos 🚀</h2>
+      <div class="projetos_container">
+        <figure class="projetos_col_left">
+          <img src="assets/img/capa-projeto.png" alt="Capa do Projeto" class="projeto_img" />
+          <figcaption class="projeto_logos">
+            <img src="assets/img/logos/angular-svgrepo-com.svg" alt="Angular" title="Angular" />
+            <img src="assets/img/logos/css-3-svgrepo-com.svg" alt="CSS" title="CSS" />
+            <img src="assets/img/logos/docker-logo-svgrepo-com.svg" alt="Docker" title="Docker" />
+            <img src="assets/img/logos/hibernate-svgrepo-com.svg" alt="Hibernate" title="Hibernate" />
+            <img src="assets/img/logos/javascript-svgrepo-com.svg" alt="JavaScript" title="JavaScript" />
+            <img src="assets/img/logos/postgresql-svgrepo-com.svg" alt="PostgreSQL" title="PostgreSQL" />
+            <img src="assets/img/logos/spring-svgrepo-com.svg" alt="Spring" title="Spring" />
+            <img src="assets/img/logos/java-logo-svgrepo-com.svg" alt="Java" title="Java" />
+            <img src="assets/img/logos/gnu-linux-svgrepo-com.svg" alt="Linux" title="Linux OS" />
+          </figcaption>
+        </figure>
+        <article class="projetos_col_right">
+          <h2 class="projeto_titulo">Titulo do Projeto</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptates harum, nulla sequi autem, qui excepturi eum ducimus
+            exercitationem nihil mollitia labore placeat facilis ab quam,
+            pariatur nesciunt! Blanditiis, veritatis quis?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+            dolore corrupti est perferendis repellendus vel illum et nulla
+            tenetur dignissimos, iste, fugiat quidem consequatur quae.
+            Perferendis, non? Totam, animi doloremque!
+          </p>
+          <a href="#" class="projeto_btn">Deploy</a>
+          <a href="#" class="projeto_btn">Código Fonte</a>
+
+          <div class="status">
+            <p>Status: <span>Em andamento</span></p>
+          </div>
+
+        </article>
+      </div>
+      <!-- Paginação -->
+      <nav class="pagination">
+        <a href="#" class="pagination_item pagination_prev" title="Anterior">«</a>
+        <a href="#" class="pagination_item pagination_active">1</a>
+        <a href="#" class="pagination_item">2</a>
+        <a href="#" class="pagination_item">3</a>
+        <a href="#" class="pagination_item">4</a>
+        <a href="#" class="pagination_item">...</a>
+        <a href="#" class="pagination_item pagination_next" title="Proximo">»</a>
+      </nav>
+    </section>
+    <!-- Projetos FIM -->
+
+    <!-- Seção de Contato INICIO -->
+    <section class="contato" id="contato">
+      <h2 class="about-title-text"><span>C</span>ontate-me</h2>
+      <div class="contato_container">
+        <!-- Mapa e Formulário -->
+        <div class="mapa_e_formulario">
+          <!-- Mapa da Cidade -->
+          <div class="mapa_container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125632.60864511869!2d-48.42963625079222!3d-10.260049314563876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x933b3439911f1257%3A0x93b8070d05c818f!2sPalmas%2C%20TO!5e0!3m2!1spt-BR!2sbr!4v1722732898354!5m2!1spt-BR!2sbr"
+              width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <!-- Formulário de Contato -->
+          <div class="formulario_contato">
+            <div class="contato_info">
+              <a href="mailto:uandersonferreiradeoliveira@gmail.com" target="_blank"
+                class="contato_item contato_item--email">
+                <i class="fa fa-envelope contato_icone"></i>
+                <span>uandersonferreiradeoliveira@gmail.com</span>
+              </a>
+              <a href="https://www.google.com/maps?q=Palmas, TO" target="_blank"
+                class="contato_item contato_item--localizacao">
+                <i class="fa fa-map-marker contato_icone"></i>
+                <span>Palmas, TO</span>
+              </a>
+              <a href="https://api.whatsapp.com/send?phone=63992701231" target="_blank"
+                class="contato_item contato_item--telefone">
+                <i class="fa fa-phone contato_icone"></i>
+                <span>+55 (63) 9 9270-1231</span>
+              </a>
+            </div>
+            <hr class="contato_separador" />
+
+            <form id="contact-form">
+              <input type="hidden" name="_next"
+                value="https://uandersonferreira.github.io/projetos-web-html-css-js/my-portifolio/sucesso.html">
+
+              <input type="hidden" name="_template" value="table">
+
+              <input type="hidden" name="_blacklist"
+                value="viagra, casino, SELECT, INSERT, UPDATE, DELETE, DROP, TRUNCATE, UNION, JOIN, WHERE, <script>, <iframe>, <img src=, <embed>, <object>, javascript:, eval(, onerror, onload, http://, https://, malware, vírus, trojan, worm, spyware, ransomware, keylogger, confidencial, senha, conta, banco, cartão, cpf, rg, login, urgente, xss, csrf, sql injection, buffer overflow">
+
+              <div class="form_group">
+                <label for="nome">Nome</label>
+                <input id="nome" class="form_input" type="text" name="name" placeholder="Seu nome" required />
+              </div>
+
+              <div class="form_group">
+                <label for="assunto">Assunto</label>
+                <input id="assunto" class="form_input" type="text" name="subject" placeholder="Assunto" required />
+              </div>
+
+              <div class="form_group">
+                <label for="email">Email</label>
+                <input id="email" class="form_input" type="email" name="email" placeholder="seu.email@gmail.com"
+                  required />
+              </div>
+
+              <div class="form_group">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" class="form_input" name="message" placeholder="Me escreva uma mensagem" rows="5"
+                  required></textarea>
+              </div>
+              <button type="submit" class="form_botao">
+                <i class="fa fa-paper-plane"></i> Enviar Mensagem
+              </button>
+            </form>
+
+            <!-- <div id="status-message" style="display: none;"></div> -->
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Seção de Contato FIM -->
+  </main>
+
+  <footer class="copyrightText">
+    <p>
+      Copyright &copy;2024 <a href="#">Uanderson Oliveira</a>. Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <script type="text/javascript">
+    // Script para manipulação do menu e cabeçalho ao rolar a página
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
+
+    function toggleMenu() {
+      const menuToggle = document.querySelector(".menuToggle");
+      const navigation = document.querySelector(".navigation");
+      menuToggle.classList.toggle("active");
+      navigation.classList.toggle("active");
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const logos = document.querySelector('.projeto_logos');
+
+      // Pausa a animação ao tocar
+      logos.addEventListener('touchstart', function () {
+        logos.classList.add('paused');
+      });
+
+      // Retoma a animação ao liberar o toque
+      logos.addEventListener('touchend', function () {
+        logos.classList.remove('paused');
+      });
+    });
+
+
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      const form = event.target; // Captura o formulário
+      const formData = new FormData(form); // Cria um objeto FormData com os dados do formulário
+
+      // Converte o FormData para um objeto JSON
+      const jsonData = {};
+      formData.forEach((value, key) => {
+        jsonData[key] = value;
+      });
+
+      // Envia os dados usando fetch com os headers corretos
+      fetch("https://formsubmit.co/ajax/uandersonferreiradeoliveira@gmail.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(jsonData) // Dados em formato JSON
+      })
+        .then(response => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error('Erro ao enviar mensagem. Verifique os dados e tente novamente.');
+          }
+        })
+        .then(data => {
+          console.log('Mensagem enviada com sucesso:', data);
+          // Redireciona para a página de sucesso
+          window.location.href = "https://uandersonferreira.github.io/projetos-web-html-css-js/my-portifolio/sucesso.html";
+        })
+        .catch(error => {
+          console.error('Erro no envio:', error);
+          alert('Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.');
+        });
+    });
+
+    // Controle do slider de logos
+    document.addEventListener('DOMContentLoaded', function () {
+      // Cria uma cópia do slide para a animação infinita
+      var copy = document.querySelector(".logos-slide").cloneNode(true);
+      document.querySelector(".logos").appendChild(copy);
+
+      // Adiciona controles de toque
+      const logosContainer = document.querySelector('.logos');
+
+      // Toggle de pausa no toque
+      let touchTimeout;
+
+      logosContainer.addEventListener('touchstart', function (e) {
+        this.classList.add('paused');
+        // Previne scroll da página durante o toque
+        e.preventDefault();
+      });
+
+      logosContainer.addEventListener('touchend', function () {
+        // Remove a pausa após 300ms para permitir ver o título
+        clearTimeout(touchTimeout);
+        touchTimeout = setTimeout(() => {
+          this.classList.remove('paused');
+        }, 300);
+      });
+    });
+
+
+
+
+  </script>
+</body>
+
+</html>
