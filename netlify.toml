@@ -6,3 +6,9 @@
   publish = "public"
   functions = "netlify/functions"
   framework = "#static"
+
+
+[[redirects]]
+  from = "/.netlify/functions/*"
+  to = "/.netlify/functions/:splat"
+  status = 200  
