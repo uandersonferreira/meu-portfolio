@@ -121,48 +121,35 @@
     <!-- carrosel infinito das logos FIM-->
 
     <!-- Projetos INICIO -->
-    <section class="projetos" id="projetos">
+    <section class="section-projetos" id="projetos">
       <h2 class="about-title-text">#<span>M</span>eus projetos 🚀</h2>
-      <div class="projetos_container">
-        <figure class="projetos_col_left">
-          <img src="assets/img/capa-projeto.png" alt="Capa do Projeto" class="projeto_img" />
-          <figcaption class="projeto_logos">
-            <img src="assets/img/logos/angular-svgrepo-com.svg" alt="Angular" title="Angular" />
-            <img src="assets/img/logos/css-3-svgrepo-com.svg" alt="CSS" title="CSS" />
-            <img src="assets/img/logos/docker-logo-svgrepo-com.svg" alt="Docker" title="Docker" />
-            <img src="assets/img/logos/hibernate-svgrepo-com.svg" alt="Hibernate" title="Hibernate" />
-            <img src="assets/img/logos/javascript-svgrepo-com.svg" alt="JavaScript" title="JavaScript" />
-            <img src="assets/img/logos/postgresql-svgrepo-com.svg" alt="PostgreSQL" title="PostgreSQL" />
-            <img src="assets/img/logos/spring-svgrepo-com.svg" alt="Spring" title="Spring" />
-            <img src="assets/img/logos/java-logo-svgrepo-com.svg" alt="Java" title="Java" />
-            <img src="assets/img/logos/gnu-linux-svgrepo-com.svg" alt="Linux" title="Linux OS" />
-          </figcaption>
-        </figure>
-        <article class="projetos_col_right">
-          <h2 class="projeto_titulo">Titulo do Projeto</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptates harum, nulla sequi autem, qui excepturi eum ducimus
-            exercitationem nihil mollitia labore placeat facilis ab quam,
-            pariatur nesciunt! Blanditiis, veritatis quis?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-            dolore corrupti est perferendis repellendus vel illum et nulla
-            tenetur dignissimos, iste, fugiat quidem consequatur quae.
-            Perferendis, non? Totam, animi doloremque!
-          </p>
-          <a href="#" class="projeto_btn">Deploy</a>
-          <a href="#" class="projeto_btn">Código Fonte</a>
-
-          <div class="status">
-            <p>Status: <span>Em andamento</span></p>
+      <template id="projeto_template">
+        <div class="projetos_container"> 
+          <figure class="projetos_col_left">
+            <img src="" alt="Capa do Projeto" class="projeto_img" />
+            <figcaption class="projeto_logos"></figcaption>
+          </figure>
+          <article class="projetos_col_right">
+            <h2 class="projeto_titulo"></h2>
+            <p class="projeto_descricao"></p>
+            <a href="#" class="projeto_btn">Deploy</a>
+            <a href="#" class="projeto_btn">Código Fonte</a>
+            <div class="status">
+              <p>Status: <span></span></p>
+            </div>
+          </article>
           </div>
 
-        </article>
+      </template>
+
+      <div class="projetos" id="projetos">
+        <!-- Projetos serão inseridos aqui via JavaScript -->
       </div>
+
+      <button id="ver_todos_projetos" class="projeto_btn">Ver Todos os Projetos</button>
+
       <!-- Paginação -->
-      <nav class="pagination">
+      <!-- <nav class="pagination">
         <a href="#" class="pagination_item pagination_prev" title="Anterior">«</a>
         <a href="#" class="pagination_item pagination_active">1</a>
         <a href="#" class="pagination_item">2</a>
@@ -170,9 +157,11 @@
         <a href="#" class="pagination_item">4</a>
         <a href="#" class="pagination_item">...</a>
         <a href="#" class="pagination_item pagination_next" title="Proximo">»</a>
-      </nav>
+      </nav> -->
     </section>
     <!-- Projetos FIM -->
+
+
 
     <!-- Seção de Contato INICIO -->
     <section class="contato" id="contato">
@@ -261,6 +250,7 @@
   </footer>
 
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/mostrar-projetos.js"></script>
 </body>
 
 </html>

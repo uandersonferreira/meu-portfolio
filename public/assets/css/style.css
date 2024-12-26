@@ -354,12 +354,12 @@ posição inicial (translateX(0)) para -100% ao longo do tempo */
 
 /* Estilo para a seção de projetos */
 
-.projetos {
+.section-projetos {
   padding: 60px 100px; /* Define padding superior e inferior */
   background-color: #f4f4f4; /* Define a cor de fundo */
 }
 
-/* Estilo para o container de projetos */
+/* Estilo para o container de section-projetos */
 .projetos_container {
   display: flex; /* Utiliza flexbox para layout */
   justify-content: space-between; /* Espaça as colunas igualmente */
@@ -367,14 +367,15 @@ posição inicial (translateX(0)) para -100% ao longo do tempo */
   align-items: flex-start; /* Alinha os itens no início */
 
   padding: 24px;
-  margin-top: 20px;
-
+  margin-top: 24px;
   border-radius: 10px; /* Bordas arredondadas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 
+  /* position: relative; */
+
 }
 
-/* Estilo para as colunas de projetos */
+/* Estilo para as colunas de section-projetos */
 .projetos_col_left, .projetos_col_right {
   width: 48%; /* Define a largura das colunas */
   margin-bottom: 20px; /* Adiciona margem inferior */
@@ -461,7 +462,12 @@ posição inicial (translateX(0)) para -100% ao longo do tempo */
 .status{
   display: flex;
   justify-content: right;
-  margin-top: 16px;
+  margin: 16px;
+
+  /* position: absolute;
+  right: 10px;
+  bottom: 10px; */
+ 
 }
 
 .status > p{
@@ -473,7 +479,7 @@ posição inicial (translateX(0)) para -100% ao longo do tempo */
   color: #002ab3;
 }
 
-/* Estilo para a seção de projetos FIM */
+/* Estilo para a seção de section-projetos FIM */
 
 
 /* Estilo para a seção de contato INICIO */
@@ -740,8 +746,8 @@ posição inicial (translateX(0)) para -100% ao longo do tempo */
   }
 
 
-  /* Responsividade dos projetos  */
-  .projetos {
+  /* Responsividade dos section-projetos  */
+  .section-projetos {
     padding: 32px; /* Define padding superior e inferior */
     background-color: #f4f4f4; /* Define a cor de fundo */
   }
@@ -752,6 +758,10 @@ posição inicial (translateX(0)) para -100% ao longo do tempo */
   
   .projetos_container {
       flex-direction: column; /* Alinha as colunas em coluna em telas menores */
+  }
+
+  .projeto{
+    border: 1px solid red;
   }
   
   .projeto_logos img {
