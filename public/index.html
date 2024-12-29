@@ -28,19 +28,25 @@
       <li><a class="link-destaque" href="/#contato" onclick="toggleMenu();">Contato</a></li>
     </ul>
   </header>
-  
+
 
   <main>
     <section class="banner" id="banner">
       <div class="content">
         <h2>Desenvolvedor Backend Java</h2>
-        <p>
-          Sou um entusiasta da tecnologia no início da carreira, sempre
-          buscando aprender e me desenvolver. Com uma curiosidade incessante e
-          paixão por resolver problemas, estou trilhando o caminho para ser um
-          Desenvolvedor Backend Java. Se você procura alguém motivado, curioso
-          e pronto para desafios, você está no lugar certo! 🚀
-        </p>
+        <div class="banner-text">
+
+          <p>
+            Sou um entusiasta da tecnologia no início da carreira, sempre em busca de aprendizado e crescimento, tanto
+            pessoal quanto profissional.
+
+            Sendo assim, estou trilhando meu caminho como Desenvolvedor Backend Java, com um
+            carinho especial por bancos de dados, especialmente PostgreSQL e nas horas vagas, gosto de me aventurar pelo
+            mundo do CSS, HTML e JavaScript, explorando o front-end de forma descontraída.
+
+            Se você procura alguém motivado, curioso e preparado para desafios, você está no lugar certo! 🚀
+          </p>
+        </div>
         <a href="#projetos" class="btn btn-projects"><i class="fa-solid fa-glasses"></i> Visualizar Projetos</a>
         <a href="https://www.linkedin.com/in/uandersonferreira" target="_blank" class="btn btn-linkedin"><i
             class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
@@ -120,52 +126,52 @@
     </section>
     <!-- carrosel infinito das logos FIM-->
 
- <!-- Projetos INICIO -->
-<section class="section-projetos" id="projetos">
-  <h2 class="about-title-text">#<span>M</span>eus projetos 🚀</h2>
-  
-  <!-- Template para cada projeto -->
-  <template id="projeto_template">
-    <div class="projetos_container">
-      <figure class="projetos_col_left">
-        <img src="" alt="Capa do Projeto" class="projeto_img" />
-        <figcaption class="projeto_logos"></figcaption>
-      </figure>
-      <article class="projetos_col_right">
-        <h2 class="projeto_titulo"></h2>
-        <div class="projeto_content">
-          <p class="projeto_descricao"></p>
-          <button class="learn-more">
-            <span class="circle" aria-hidden="true">
-              <span class="icon arrow"></span>
-            </span>
-            <span class="button-text">Mostrar mais</span>
-          </button>
-        </div>
-        <div class="projeto_actions">
-          <a href="#" class="projeto_btn">Deploy</a>
-          <a href="#" class="projeto_btn">Código Fonte</a>
-          <div class="status">
-            <p>Status: <span></span></p>
-          </div>
-        </div>
-      </article>
-    </div>
-  </template>
+    <!-- Projetos INICIO -->
+    <section class="section-projetos" id="projetos">
+      <h2 class="about-title-text">#<span>M</span>eus projetos 🚀</h2>
 
-  <!-- Container para os projetos -->
-  <div class="projetos-wrapper">
-    <div class="projetos" id="projetos">
-      <!-- Projetos serão inseridos aqui via JavaScript -->
-    </div>
-    
-    <!-- Botão de ver todos sempre será o último elemento -->
-    <div class="ver-todos-container">
-      <button id="ver_todos_projetos" class="projeto_btn">Ver Todos os Projetos</button>
-    </div>
-  </div>
-</section>
-<!-- Projetos FIM -->
+      <!-- Template para cada projeto -->
+      <template id="projeto_template">
+        <div class="projetos_container">
+          <figure class="projetos_col_left">
+            <img src="" alt="Capa do Projeto" class="projeto_img" />
+            <figcaption class="projeto_logos"></figcaption>
+          </figure>
+          <article class="projetos_col_right">
+            <h2 class="projeto_titulo"></h2>
+            <div class="projeto_content">
+              <p class="projeto_descricao"></p>
+              <button class="learn-more">
+                <span class="circle" aria-hidden="true">
+                  <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">Mostrar mais</span>
+              </button>
+            </div>
+            <div class="projeto_actions">
+              <a href="#" class="projeto_btn">Deploy</a>
+              <a href="#" class="projeto_btn">Código Fonte</a>
+              <div class="status">
+                <p>Status: <span></span></p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </template>
+
+      <!-- Container para os projetos -->
+      <div class="projetos-wrapper">
+        <div class="projetos" id="projetos">
+          <!-- Projetos serão inseridos aqui via JavaScript -->
+        </div>
+
+        <!-- Botão de ver todos sempre será o último elemento -->
+        <div class="ver-todos-container">
+          <button id="ver_todos_projetos" class="projeto_btn">Ver Todos os Projetos</button>
+        </div>
+      </div>
+    </section>
+    <!-- Projetos FIM -->
 
 
 

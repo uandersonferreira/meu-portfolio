@@ -56,6 +56,16 @@
   color: var(--white);
 }
 
+.banner .banner-text {
+  color: #fff; /* Garante que o texto seja legível */
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo preto semi-transparente */
+  padding: 20px; /* Espaçamento interno para o texto */
+  border-radius: 8px; /* Cantos arredondados */
+  text-align: center; /* Centraliza o texto */
+  max-width: 100%; /* Evita que o texto se espalhe demais */
+}
+
+
 /* Estiliza o parágrafo no banner */
 .banner .content p {
   font-size: 1em;
