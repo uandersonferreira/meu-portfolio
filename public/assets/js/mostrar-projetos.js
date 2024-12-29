@@ -28,12 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const truncatedText = fullText.substring(0, 450) + '...';
 
       if (isExpanded) {
-          descricaoElement.textContent = truncatedText;
-          button.querySelector('.button-text').textContent = 'Learn More';
-      } else {
-          descricaoElement.textContent = fullText;
-          button.querySelector('.button-text').textContent = 'Show Less';
-      }
+        descricaoElement.textContent = truncatedText;
+        button.querySelector('.button-text').textContent = 'Saber mais';
+    } else {
+        descricaoElement.textContent = fullText;
+        button.querySelector('.button-text').textContent = 'Mostrar menos';
+    }
 
       descricaoElement.dataset.expanded = !isExpanded;
   }

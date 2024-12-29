@@ -91,3 +91,14 @@
       }, 300);
     });
   });
+
+
+
+    // Adiciona a URL base dinamicamente
+    const navigationLinks = document.querySelectorAll('.navigation a');
+    const currentURL = window.location.origin; // Pega a base do site (ex: https://uandersonferreira.netlify.app)
+  
+    navigationLinks.forEach(link => {
+      const section = link.getAttribute('href'); // Pega o valor original do href (#banner, #sobre, etc.)
+      link.setAttribute('href', `${currentURL}/${section}`); // Adiciona a URL completa
+    });
