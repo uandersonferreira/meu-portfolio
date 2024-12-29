@@ -1,40 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todos os Projetos</title>
-  <link rel="stylesheet" href="assets/css/style.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos os Projetos</title>
+    <!-- Adicione seus arquivos CSS aqui -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        
+        header{
+            background-color: #f4f4f4; /* Define a cor de fundo */
+            padding: 10px 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        header .navigation li a {
+        color: #111;
+        }
+
+        header .logo {
+        color: var(--black-02);
+        }
+
+        header .menuToggle {
+            filter: invert(1);
+        }
+
+        main{
+            padding-top: 20px;
+        }
+
+
+    </style>
 </head>
 <body>
-  <section class="section-projetos" id="todos_projetos">
-    <h2 class="about-title-text">#<span>T</span>odos os projetos 🚀</h2>
-    <template id="projeto_template">
-      <div class="projetos_container">
-        <figure class="projetos_col_left">
-          <img src="" alt="Capa do Projeto" class="projeto_img" />
-          <figcaption class="projeto_logos"></figcaption>
-        </figure>
-        <article class="projetos_col_right">
-          <h2 class="projeto_titulo"></h2>
-          <p class="projeto_descricao"></p>
-          <a href="#" class="projeto_btn">Deploy</a>
-          <a href="#" class="projeto_btn">Código Fonte</a>
-          <div class="status">
-            <p>Status: <span></span></p>
-          </div>
-        </article>
-      </div>
-    </template>
-    
-    <div class="projetos" id="projetos">
-    </div>
 
-    <button hidden id="ver_todos_projetos" class="projeto_btn">Ver Todos os Projetos</button>
+    <header>
+        <a href="#" class="logo">Uanderson <span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <!-- Ícone para abrir/fechar o menu -->
+        <ul class="navigation">
+          <li><a class="link-destaque" href="#banner" onclick="toggleMenu();">Home</a></li>
+          <li><a class="link-destaque" href="#sobre" onclick="toggleMenu();">Sobre</a></li>
+          <li><a class="link-destaque" href="#projetos" onclick="toggleMenu();">Projetos</a></li>
+          <li><a class="link-destaque" href="#contato" onclick="toggleMenu();">Contato</a></li>
+        </ul>
+      </header>
+    <main>
+        <!-- Projetos INICIO -->
+        <section class="section-projetos" id="projetos">
+            <h2 class="about-title-text">#<span>T</span>odos os projetos 🚀</h2>
+            
+            <!-- Template para cada projeto -->
+            <template id="projeto_template">
+                <div class="projetos_container">
+                    <figure class="projetos_col_left">
+                        <img src="" alt="Capa do Projeto" class="projeto_img" />
+                        <figcaption class="projeto_logos"></figcaption>
+                    </figure>
+                    <article class="projetos_col_right">
+                        <h2 class="projeto_titulo"></h2>
+                        <div class="projeto_content">
+                            <p class="projeto_descricao"></p>
+                            <button class="learn-more">
+                                <span class="circle" aria-hidden="true">
+                                    <span class="icon arrow"></span>
+                                </span>
+                                <span class="button-text">Learn More</span>
+                            </button>
+                        </div>
+                        <div class="projeto_actions">
+                            <a href="#" class="projeto_btn">Deploy</a>
+                            <a href="#" class="projeto_btn">Código Fonte</a>
+                            <div class="status">
+                                <p>Status: <span></span></p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </template>
 
-  </section>
-  
-  <script src="assets/js/mostrar-projetos.js"></script> 
+            <!-- Container para os projetos -->
+            <div class="projetos-wrapper">
+                <div class="projetos" id="projetos">
+                    <!-- Projetos serão inseridos aqui via JavaScript -->
+                </div>
+            </div>
+        </section>
+        <!-- Projetos FIM -->
+    </main>
 
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/todos-projetos.js"></script>
+
+    <footer class="copyrightText">
+        <p>
+          Copyright &copy;2024 <a href="#">Uanderson Oliveira</a>. Todos os direitos reservados.
+        </p>
+      </footer>
 </body>
 </html>

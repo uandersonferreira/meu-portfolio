@@ -8,12 +8,49 @@
     <link rel="stylesheet" href="assets/css/cadastro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/fontawesome.min.css" integrity="sha512-lauN4D/0AgFUGvmMR+knQnbOADyD/XuQ8VF18I8Ll0+TLvsujshyxvU+uzogmQbSq6qJd5jnUdYtK8ShxXMlSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        header{
+            background-color: #f4f4f4; /* Define a cor de fundo */
+            padding: 10px 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        header .navigation li a {
+        color: #111;
+        }
+
+        header .logo {
+        color: var(--black-02);
+        }
+
+        header .menuToggle {
+            filter: invert(1);
+        }
+
+    
+    </style>
+
 </head>
 <body>
+
+    <header>
+        <a href="#" class="logo">Uanderson <span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <!-- Ícone para abrir/fechar o menu -->
+        <ul class="navigation">
+          <li><a class="link-destaque" href="#banner" onclick="toggleMenu();">Home</a></li>
+          <li><a class="link-destaque" href="#sobre" onclick="toggleMenu();">Sobre</a></li>
+          <li><a class="link-destaque" href="#projetos" onclick="toggleMenu();">Projetos</a></li>
+          <li><a class="link-destaque" href="#contato" onclick="toggleMenu();">Contato</a></li>
+        </ul>
+      </header>
+      
     <div class="container">
-        <header>
-            <h1 class="page-title">Cadastro de Novo Projeto</h1>
-        </header>
+        
+        <h1 class="page-title">Cadastro de Novo Projeto</h1>
+        
 
         <main class="form-section">
             <form  method="post" enctype="multipart/form-data">
@@ -135,8 +172,15 @@
     </div>
 
 
+    <script src="assets/js/script.js"></script>
     <script src="assets/js/cadastro.js"> </script>
     <!-- <script src="assets/js/add-tecnologia.js"></script> -->
+
+    <footer class="copyrightText">
+        <p>
+          Copyright &copy;2024 <a href="#">Uanderson Oliveira</a>. Todos os direitos reservados.
+        </p>
+      </footer>
 
 </body>
 </html>

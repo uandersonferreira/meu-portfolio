@@ -18,7 +18,7 @@ body {
     font-family: 'Segoe UI', system-ui, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: #f4f4f4d5; /* Define a cor de fundo */
     padding: 2rem 1rem;
 }
 
@@ -26,11 +26,12 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 48px auto;
     background-color: white;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 2rem;
+
 }
 
 .page-title {

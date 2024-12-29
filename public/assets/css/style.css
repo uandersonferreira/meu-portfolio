@@ -32,11 +32,6 @@
   --bg-color-02: #fcf7f7b4;
 }
 
-/* Define o peso da fonte para parágrafos */
-p {
-  font-weight: 300;
-}
-
 /* Estiliza a seção do banner */
 .banner {
   position: relative;
@@ -233,11 +228,12 @@ header .navigation li a.link-destaque:hover{
 }
 
 /* Estilo para os parágrafos */
-.about p {
+.about-col-right p {
   font-size: 1em; /* Define o tamanho da fonte */
   color: #333; /* Define a cor do texto */
   line-height: 1.6; /* Define a altura da linha */
   margin-bottom: 10px; /* Adiciona margem inferior */
+  text-align: justify;
 }
 
 /* Sobre fim */
@@ -354,6 +350,7 @@ posição inicial (translateX(0)) para -100% ao longo do tempo */
 
 /* Estilo para a seção de projetos */
 
+
 .section-projetos {
   padding: 60px 100px; /* Define padding superior e inferior */
   background-color: #f4f4f4; /* Define a cor de fundo */
@@ -376,16 +373,26 @@ posição inicial (translateX(0)) para -100% ao longo do tempo */
 }
 
 /* Estilo para as colunas de section-projetos */
-.projetos_col_left, .projetos_col_right {
-  width: 48%; /* Define a largura das colunas */
+.projetos_col_left {
+  width: 40%; /* Define a largura das colunas */
   margin-bottom: 20px; /* Adiciona margem inferior */
+  padding-right: 20px; /* Adiciona margem direita */
 }
 
+.projetos_col_right {
+  width: 60%; /* Define a largura das colunas */
+  margin-bottom: 20px; /* Adiciona margem inferior */
+}
 /* Estilo para as imagens de projeto */
 .projeto_img {
-  width: 100%; /* Define a largura das imagens */
-  border-radius: 10px; /* Adiciona bordas arredondadas */
+  width: 95%; /* Define a largura das imagens */
+  border-radius: 8px; /* Adiciona bordas arredondadas */
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+.projeto_img:hover{
+  object-fit: cover; /* Mantém a proporção das logos */
+  transform: scale(1.01);
 }
 
 /* Estilo para o container de logos de projeto */
@@ -399,9 +406,13 @@ posição inicial (translateX(0)) para -100% ao longo do tempo */
 
 /* Estilo para as logos de projeto */
 .projeto_logos img {
-  width: 40px; /* Define a largura das logos */
-  height: 40px; /* Define a altura das logos */
+  width: 50px; /* Define a largura das logos */
+  height: 50px; /* Define a altura das logos */
   object-fit: cover; /* Mantém a proporção das logos */
+}
+
+.projeto_logos img:hover {
+  transform: scale(1.1); /* Aumenta o tamanho da logo ao passar o mouse */
 }
 
 /* Estilo para o título do projeto */
@@ -410,6 +421,10 @@ posição inicial (translateX(0)) para -100% ao longo do tempo */
   font-weight: 600; /* Define o peso da fonte */
   margin-bottom: 20px; /* Adiciona margem inferior */
   color: #333; /* Define a cor do texto */
+}
+
+.projeto_descricao{
+  text-align: justify;
 }
 
 /* Estilo para os botões de projeto */
@@ -428,6 +443,103 @@ posição inicial (translateX(0)) para -100% ao longo do tempo */
 .projeto_btn:hover {
   background-color: var(--blue-02); /* Muda a cor de fundo no hover */
 }
+
+#ver_todos_projetos {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* INICIO Estilo button read more */
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+ }
+ 
+ button.learn-more {
+  width: 13.5rem;
+  height: auto;
+ }
+ 
+ button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+ }
+ 
+ button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+ }
+ 
+ button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+ }
+ 
+ button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+ }
+ 
+ button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+ }
+ 
+ button:hover .circle {
+  width: 100%;
+ }
+ 
+ button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+ }
+ 
+ button:hover .button-text {
+  color: #fff;
+ }
+ /* FIM  Estilo button read more */
 
 /* Estilo para a paginação */
 .pagination {
@@ -763,10 +875,14 @@ posição inicial (translateX(0)) para -100% ao longo do tempo */
   .projeto{
     border: 1px solid red;
   }
-  
-  .projeto_logos img {
-      width: 30px; /* Define a largura das logos em telas menores */
-      height: 30px; /* Define a altura das logos em telas menores */
+
+  .projeto_imagem {
+    width: 80%;
+    height: 80%;
+  }
+
+    .projeto_logos img {
+     margin: 8px;
   }
 
   /* Responsividade Contatos */
@@ -805,6 +921,12 @@ posição inicial (translateX(0)) para -100% ao longo do tempo */
   .projeto_btn{
     width: 100%;
     text-align: center;
+  }
+
+  .projeto_logos img {
+    width: 40px; /* Define a largura das logos em telas menores */
+    height: 40px; /* Define a altura das logos em telas menores */
+    margin: 4px;
   }
 
 
