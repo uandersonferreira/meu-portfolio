@@ -1,0 +1,153 @@
+
+
+section.experiencia {
+    margin: 0;
+    font-family: sans-serif;
+    color: #fff;
+    padding: 2em;
+
+    background-image: url(../img/bg-01.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+
+.title{
+    text-align: center;
+}
+
+.title h2{
+    color: #fff;   
+}
+
+.title p{
+    color: #0d71fc;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+}
+
+.timeline__container{
+    margin: 5em auto;
+    max-width: 34.16em;
+}
+
+.timeline__container h2{
+    margin-bottom: 0.5em;
+}
+
+
+.timeline__checkpoint{
+    max-width: 34em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+}
+
+.timeline__checkpoint div{
+    border: 2px solid #888;
+    border-radius: 1em;
+    padding: 1.5em;
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+.timeline__checkpoint p{
+    line-height: 27px;
+    color: #ccc;
+    font-weight: 500;
+}
+
+.timeline__checkpoint:nth-child(odd){
+    border-left: 3px solid #888;
+    padding-left: 3em;
+    transform: translateX(16.9em);
+}
+
+.timeline__checkpoint:nth-child(even){
+    border-right: 3px solid #888;
+    padding-right: 3em;
+    transform: translateX(-16.9em);
+}
+
+.timeline__checkpoint:nth-child(odd)::before,
+.timeline__checkpoint:nth-child(even)::before{
+    content: '';
+    background: #888;
+    width: 3em;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline__checkpoint:nth-child(odd)::before{
+    left: 0;
+}
+
+.timeline__checkpoint:nth-child(even)::before{
+    right: 0;
+}
+
+
+.timeline__checkpoint:nth-child(odd) div::before,
+.timeline__checkpoint:nth-child(even) div::before{
+    content: '';
+    background: #fff;
+    box-shadow: 0 0 0.5em #0d71fc;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline__checkpoint:nth-child(odd) div::before{
+    left: -0.5em;
+}
+
+.timeline__checkpoint:nth-child(even) div::before{
+    right: -0.5em;
+}
+
+.timeline__checkpoint .timeline_date{
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width: 1115px){
+
+    .timeline__container{
+        width: 80vw;
+    }
+
+    .timeline__container .timeline__checkpoint{
+        width: 100%;
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+    }
+
+    .timeline__container .timeline__checkpoint::before{
+        width: 3px;
+        height: 4em;
+        top: -2em;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+    .timeline__container .timeline__checkpoint div::before{
+        top: -0.5em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    
+}

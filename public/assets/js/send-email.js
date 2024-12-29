@@ -35,16 +35,10 @@ document.getElementById("contact-form").addEventListener("submit", async functio
         const data = await response.json();
         console.log("Mensagem enviada com sucesso:", data);
 
-        // Feedback visual antes do redirecionamento
-        const successMessage = document.createElement('div');
-        successMessage.textContent = 'Mensagem enviada com sucesso!';
-        successMessage.style.color = 'green';
-        event.target.appendChild(successMessage);
 
-        // Redireciona após um breve delay para mostrar a mensagem de sucesso
-        setTimeout(() => {
-            window.location.href = "https://uandersonferreira.netlify.app/sucesso.html";
-        }, 1500);
+        // Redireciona para a página de sucesso
+        window.location.href = "https://uandersonferreira.netlify.app/sucesso.html";
+
 
     } catch (error) {
         console.error("Erro no envio:", error);

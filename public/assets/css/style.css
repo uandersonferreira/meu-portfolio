@@ -225,8 +225,8 @@ header .navigation li a.link-destaque:hover{
 /* Estilo para os títulos */
 .about-title-text {
   color: #111; /* Define a cor do texto */
-  font-size: 2em; /* Define o tamanho da fonte */
-  font-weight: 300; /* Define o peso da fonte */
+  font-size: 2.5em; /* Define o tamanho da fonte */
+  font-weight: bold; /* Define o peso da fonte */
   margin-bottom: 20px; /* Adiciona margem inferior */
 }
 
@@ -607,12 +607,15 @@ button {
 /* Estilo para a seção de contato INICIO */
 
 .contato {
-  padding: 30px 100px; /* Define padding superior e inferior */
+  padding: 60px 20px; /* Define padding superior e inferior */
   background-color: #f4f4f4; /* Define a cor de fundo */
   text-align: center; /* Centraliza o texto */
   gap: 8px;
 }
 
+.contato .about-title-text{
+  padding-bottom: 20px;
+}
 /* Estilo para o título da seção */
 .titulo {
   font-size: 2.5em; /* Define o tamanho da fonte */
