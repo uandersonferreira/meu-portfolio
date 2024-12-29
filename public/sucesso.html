@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucesso envio</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        text-align: center;
+        padding: 40px 0;
+        background: #EBF0F5;
+    }
+
+    h1 {
+        color: #88B04B;
+        font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+        font-weight: 900;
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    a {
+        list-style: none;
+        color: #88B04B;
+        margin-top: 12px;
+        letter-spacing: 0.5px;
+        font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+        font-size: 20px;
+    }
+
+    p {
+        color: #404F5E;
+        font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    i {
+        font-size: 100px;
+        line-height: 200px;
+        margin-left: -15px;
+        color: #333; /* Cor inicial do checkmark */
+        transition: color 0.5s ease-in-out; /* Transição suave para mudança de cor */
+    }
+
+    .card {
+        background: white;
+        padding: 60px;
+        border-radius: 4px;
+        box-shadow: 0 2px 3px #C8D0D8;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    /* Estilo para o círculo de confirmação */
+    .check-container {
+        position: relative;
+        border-radius: 200px;
+        height: 200px;
+        width: 200px;
+        background: #F8FAF5;
+        margin: 0 auto;
+    }
+
+    /* Animação de carregamento circular (uma vez) */
+    .circle-loader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 5px solid transparent;
+        border-top: 5px solid #88B04B;
+        border-radius: 50%;
+        animation: spin 2s linear;
+        animation-iteration-count: 1; /* Executa a animação uma vez */
+        animation-fill-mode: forwards; /* Mantém o estado final da animação */
+    }
+
+    /* Esconde o círculo após a animação */
+    .circle-loader.hide {
+        opacity: 0;
+        transition: opacity 0.5s ease-out; /* Transição suave para desaparecer */
+    }
+
+    /* Animação de rotação */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    /* Nova cor do checkmark após a animação */
+    .checkmark.ok {
+        color: #88B04B; /* Cor verde para indicar sucesso */
+    }
+
+    /* Esconde o conteúdo inicialmente */
+    .hidden {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    /* Exibe o conteúdo após a animação */
+    .visible {
+        opacity: 1;
+    }
+
+</style>
+
+<body>
+    <div class="card">
+        <div class="check-container">
+            <!-- Círculo de carregamento ao redor do check -->
+            <div class="circle-loader" id="circleLoader"></div>
+            <i class="checkmark" id="checkmark">✓</i>
+        </div>
+
+        <!-- Conteúdo oculto inicialmente -->
+        <h1 class="hidden" id="successTitle">Contato enviado <br> com sucesso!</h1>
+
+        <p class="hidden" id="successMessage">Agradeço pela sua mensagem e entrarei em contato o mais breve possível.</p>
+
+        <a class="hidden" id="backLink" href="https://uandersonferreira.netlify.app/">Voltar</a>
+    </div>
+
+    <script>
+        // Função para esconder o círculo, mudar a cor do checkmark e exibir o conteúdo
+        document.addEventListener("DOMContentLoaded", function () {
+            // A duração da animação é 2s, então vamos esperar 2 segundos
+            setTimeout(function () {
+                // Esconder o círculo de carregamento
+                document.getElementById("circleLoader").classList.add("hide");
+
+                // Mudar a cor do checkmark
+                document.getElementById("checkmark").classList.add("ok");
+
+                // Exibir o conteúdo (título, mensagem e link)
+                document.getElementById("successTitle").classList.add("visible");
+                document.getElementById("successMessage").classList.add("visible");
+                document.getElementById("backLink").classList.add("visible");
+            }, 2000); // 2000ms = 2s
+        });
+    </script>
+
+</body>
+</html>

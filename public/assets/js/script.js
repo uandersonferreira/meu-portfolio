@@ -25,51 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
 
-    const form = event.target; // Captura o formulário
-    const formData = new FormData(form); // Cria um objeto FormData com os dados do formulário
-
-    // Converte o FormData para um objeto JSON
-    const jsonData = {};
-    formData.forEach((value, key) => {
-      jsonData[key] = value;
-    });
-
-    // Envia os dados usando fetch com os headers corretos
-    fetch("https://formsubmit.co/ajax/uandersonferreiradeoliveira@gmail.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(jsonData), // Dados em formato JSON
-    })
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error(
-            "Erro ao enviar mensagem. Verifique os dados e tente novamente."
-          );
-        }
-      })
-      .then((data) => {
-        console.log("Mensagem enviada com sucesso:", data);
-        // Redireciona para a página de sucesso
-        window.location.href =
-          "https://uandersonferreira.github.io/projetos-web-html-css-js/my-portifolio/sucesso.html";
-      })
-      .catch((error) => {
-        console.error("Erro no envio:", error);
-        alert(
-          "Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente."
-        );
-      });
-  });
 
 // Controle do slider de logos
 document.addEventListener("DOMContentLoaded", function () {
