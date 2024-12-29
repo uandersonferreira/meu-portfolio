@@ -1,1 +1,105 @@
-const _0xe36ce3=_0x55c4;function _0x55c4(_0x440972,_0x27688a){const _0x4a1047=_0x4a10();return _0x55c4=function(_0x55c43e,_0x2f3687){_0x55c43e=_0x55c43e-0x1ef;let _0x59154b=_0x4a1047[_0x55c43e];return _0x59154b;},_0x55c4(_0x440972,_0x27688a);}(function(_0x5db13d,_0x4ec7c0){const _0x4a9875=_0x55c4,_0x5f025e=_0x5db13d();while(!![]){try{const _0x19b532=parseInt(_0x4a9875(0x1ff))/0x1*(-parseInt(_0x4a9875(0x1f9))/0x2)+-parseInt(_0x4a9875(0x215))/0x3+-parseInt(_0x4a9875(0x1f3))/0x4+parseInt(_0x4a9875(0x20b))/0x5*(parseInt(_0x4a9875(0x21a))/0x6)+-parseInt(_0x4a9875(0x225))/0x7*(parseInt(_0x4a9875(0x21f))/0x8)+-parseInt(_0x4a9875(0x1f2))/0x9*(parseInt(_0x4a9875(0x1f6))/0xa)+parseInt(_0x4a9875(0x222))/0xb;if(_0x19b532===_0x4ec7c0)break;else _0x5f025e['push'](_0x5f025e['shift']());}catch(_0x52babf){_0x5f025e['push'](_0x5f025e['shift']());}}}(_0x4a10,0x290ea),document[_0xe36ce3(0x228)](_0xe36ce3(0x21e),()=>{const _0x13fd8d=_0xe36ce3,_0x52b8b1=document[_0x13fd8d(0x22e)](_0x13fd8d(0x1fe)),_0xd23fdd=document[_0x13fd8d(0x22e)](_0x13fd8d(0x1f8))[_0x13fd8d(0x227)],_0x3af03c=document[_0x13fd8d(0x22e)](_0x13fd8d(0x216));if(!_0x52b8b1||!_0xd23fdd||!_0x3af03c){console[_0x13fd8d(0x1f1)](_0x13fd8d(0x201));return;}function _0x236542(_0x17a2ee,_0x253cd9){const _0x298ebd=_0x13fd8d,_0x4d7394=_0x17a2ee[_0x298ebd(0x226)];if(_0x4d7394['length']>_0x253cd9){const _0x55f4b8=_0x4d7394[_0x298ebd(0x206)](0x0,_0x253cd9)+_0x298ebd(0x20f);return _0x17a2ee[_0x298ebd(0x226)]=_0x55f4b8,_0x17a2ee['dataset'][_0x298ebd(0x22b)]=_0x4d7394,_0x17a2ee['dataset'][_0x298ebd(0x214)]=_0x298ebd(0x21b),!![];}return![];}function _0x39d6ee(_0x17eb05,_0x2c29d7){const _0x347a45=_0x13fd8d,_0x4257ae=_0x17eb05[_0x347a45(0x22c)][_0x347a45(0x214)]==='true',_0x3aea17=_0x17eb05[_0x347a45(0x22c)][_0x347a45(0x22b)],_0x473935=_0x3aea17[_0x347a45(0x206)](0x0,0x1c2)+'...';_0x4257ae?(_0x17eb05[_0x347a45(0x226)]=_0x473935,_0x2c29d7[_0x347a45(0x203)](_0x347a45(0x208))[_0x347a45(0x226)]=_0x347a45(0x229)):(_0x17eb05[_0x347a45(0x226)]=_0x3aea17,_0x2c29d7[_0x347a45(0x203)](_0x347a45(0x208))['textContent']='Mostrar\x20menos'),_0x17eb05[_0x347a45(0x22c)][_0x347a45(0x214)]=!_0x4257ae;}fetch(_0x13fd8d(0x1f4))[_0x13fd8d(0x1fc)](_0x18fbf6=>_0x18fbf6['json']())['then'](_0x3c3229=>{const _0x324ccf=_0x13fd8d;if(_0x3c3229[_0x324ccf(0x220)]===0x0){_0x52b8b1['innerHTML']='<p>Ainda\x20não\x20há\x20projetos\x20criados.</p>',_0x3af03c[_0x324ccf(0x205)]['display']='none';return;}const _0x24410c=_0x3c3229[_0x324ccf(0x202)](0x0,0x3);_0x24410c[_0x324ccf(0x20a)](_0x2e5f46=>{const _0x2614c8=_0x324ccf,_0x2e33aa=document[_0x2614c8(0x232)](_0xd23fdd,!![]);_0x2e33aa[_0x2614c8(0x203)]('.projeto_img')[_0x2614c8(0x231)]=_0x2e5f46['imagemCapa']||'assets/img/default-capa-projeto.png',_0x2e33aa[_0x2614c8(0x203)](_0x2614c8(0x20d))['textContent']=_0x2e5f46[_0x2614c8(0x212)]||_0x2614c8(0x211);const _0x3f9407=_0x2e33aa[_0x2614c8(0x203)](_0x2614c8(0x230));_0x3f9407[_0x2614c8(0x226)]=_0x2e5f46[_0x2614c8(0x22f)]||_0x2614c8(0x1f0);const _0x3d3d6d=_0x2e33aa[_0x2614c8(0x203)]('.learn-more');_0x236542(_0x3f9407,0x1c2)?_0x3d3d6d[_0x2614c8(0x228)]('click',()=>{_0x39d6ee(_0x3f9407,_0x3d3d6d);}):_0x3d3d6d['style'][_0x2614c8(0x218)]=_0x2614c8(0x224);const _0x5c8356=_0x2e33aa[_0x2614c8(0x203)](_0x2614c8(0x1f5));_0x5c8356[_0x2614c8(0x203)](_0x2614c8(0x20c))[_0x2614c8(0x22a)]=_0x2e5f46[_0x2614c8(0x213)]||'#',_0x5c8356[_0x2614c8(0x203)]('.projeto_btn:nth-child(2)')[_0x2614c8(0x22a)]=_0x2e5f46['urlGithub']||'#',_0x5c8356[_0x2614c8(0x203)](_0x2614c8(0x21c))[_0x2614c8(0x226)]=_0x2e5f46['status']||_0x2614c8(0x1fb);const _0x40a0eb=_0x2e33aa['querySelector'](_0x2614c8(0x221));_0x2e5f46[_0x2614c8(0x20e)]&&_0x2e5f46['tecnologias'][_0x2614c8(0x220)]>0x0?_0x2e5f46[_0x2614c8(0x20e)][_0x2614c8(0x20a)](_0x5965f2=>{const _0x388e90=_0x2614c8,_0x5aa25d=document[_0x388e90(0x207)](_0x388e90(0x1ef));_0x5aa25d[_0x388e90(0x231)]=_0x5965f2[_0x388e90(0x21d)]||_0x388e90(0x209),_0x5aa25d['alt']=_0x5965f2[_0x388e90(0x200)]||_0x388e90(0x1f7),_0x5aa25d[_0x388e90(0x22d)]=_0x5965f2[_0x388e90(0x200)]||_0x388e90(0x1f7),_0x40a0eb[_0x388e90(0x204)](_0x5aa25d);}):_0x40a0eb[_0x2614c8(0x210)]=_0x2614c8(0x1fd),_0x52b8b1[_0x2614c8(0x204)](_0x2e33aa);});})['catch'](_0x41f9eb=>{const _0x304c73=_0x13fd8d;console[_0x304c73(0x1f1)](_0x304c73(0x1fa),_0x41f9eb),_0x52b8b1[_0x304c73(0x210)]='<p>Erro\x20ao\x20carregar\x20os\x20projetos.\x20Tente\x20novamente\x20mais\x20tarde.</p>',_0x3af03c[_0x304c73(0x205)][_0x304c73(0x218)]=_0x304c73(0x224);}),_0x3af03c['addEventListener'](_0x13fd8d(0x219),()=>{const _0x42e54f=_0x13fd8d;window[_0x42e54f(0x217)][_0x42e54f(0x22a)]=_0x42e54f(0x223);});}));function _0x4a10(){const _0x1900c2=['error','3312Vqumqw','383548fyiNdn','https://raw.githubusercontent.com/uandersonferreira/meu-portfolio/main/projetos.json','.projeto_actions','8320RCLTbU','Tecnologia\x20desconhecida','projeto_template','786PibVNh','Erro\x20ao\x20carregar\x20os\x20projetos:','Status\x20não\x20disponível','then','<p>Tecnologias\x20não\x20disponíveis</p>','projetos','435GUTYwG','nome','Erro\x20ao\x20encontrar\x20elementos\x20necessários\x20no\x20DOM.','slice','querySelector','appendChild','style','substring','createElement','.button-text','assets/img/default-icon.png','forEach','10QviZYF','.projeto_btn:nth-child(1)','.projeto_titulo','tecnologias','...','innerHTML','Título\x20não\x20disponível','titulo','urlDeploy','expanded','624927XMfLnM','ver_todos_projetos','location','display','click','821526slsAgO','false','.status\x20span','icone','DOMContentLoaded','3944qEsriw','length','.projeto_logos','10637198bCMQMG','todos_projetos.html','none','4137obhhEs','textContent','content','addEventListener','Saber\x20mais','href','fullText','dataset','title','getElementById','descricao','.projeto_descricao','src','importNode','img','Descrição\x20não\x20disponível'];_0x4a10=function(){return _0x1900c2;};return _0x4a10();}
+document.addEventListener('DOMContentLoaded', () => {
+  const projetosContainer = document.getElementById('projetos');
+  const projetoTemplate = document.getElementById('projeto_template').content;
+  const verTodosProjetosBtn = document.getElementById('ver_todos_projetos');
+
+  if (!projetosContainer || !projetoTemplate || !verTodosProjetosBtn) {
+      console.error('Erro ao encontrar elementos necessários no DOM.');
+      return;
+  }
+
+  // Função para truncar texto
+  function truncateText(element, maxLength) {
+      const text = element.textContent;
+      if (text.length > maxLength) {
+          const truncated = text.substring(0, maxLength) + '...';
+          element.textContent = truncated;
+          element.dataset.fullText = text; // Guarda o texto completo
+          element.dataset.expanded = 'false';
+          return true;
+      }
+      return false;
+  }
+
+  // Função para alternar visibilidade do texto completo
+  function toggleFullText(descricaoElement, button) {
+      const isExpanded = descricaoElement.dataset.expanded === 'true';
+      const fullText = descricaoElement.dataset.fullText;
+      const truncatedText = fullText.substring(0, 450) + '...';
+
+      if (isExpanded) {
+        descricaoElement.textContent = truncatedText;
+        button.querySelector('.button-text').textContent = 'Saber mais';
+    } else {
+        descricaoElement.textContent = fullText;
+        button.querySelector('.button-text').textContent = 'Mostrar menos';
+    }
+
+      descricaoElement.dataset.expanded = !isExpanded;
+  }
+
+  fetch('https://raw.githubusercontent.com/uandersonferreira/meu-portfolio/main/projetos.json')
+      .then(response => response.json())
+      .then(projetos => {
+          if (projetos.length === 0) {
+              projetosContainer.innerHTML = '<p>Ainda não há projetos criados.</p>';
+              verTodosProjetosBtn.style.display = 'none';
+              return;
+          }
+
+          const projetosPrincipais = projetos.slice(0, 3);
+
+          projetosPrincipais.forEach(projeto => {
+              const clone = document.importNode(projetoTemplate, true);
+
+              // Atualizar imagem e textos básicos
+              clone.querySelector('.projeto_img').src = projeto.imagemCapa || 'assets/img/default-capa-projeto.png';
+              clone.querySelector('.projeto_titulo').textContent = projeto.titulo || 'Título não disponível';
+              
+              const descricaoElement = clone.querySelector('.projeto_descricao');
+              descricaoElement.textContent = projeto.descricao || 'Descrição não disponível';
+
+              // Truncar texto se necessário e configurar botão Learn More
+              const learnMoreBtn = clone.querySelector('.learn-more');
+              if (truncateText(descricaoElement, 450)) {
+                  learnMoreBtn.addEventListener('click', () => {
+                      toggleFullText(descricaoElement, learnMoreBtn);
+                  });
+              } else {
+                  // Se o texto for curto, esconde o botão Learn More
+                  learnMoreBtn.style.display = 'none';
+              }
+
+              // Atualizar links
+              const actionButtons = clone.querySelector('.projeto_actions');
+              actionButtons.querySelector('.projeto_btn:nth-child(1)').href = projeto.urlDeploy || '#';
+              actionButtons.querySelector('.projeto_btn:nth-child(2)').href = projeto.urlGithub || '#';
+              actionButtons.querySelector('.status span').textContent = projeto.status || 'Status não disponível';
+
+              // Adicionar tecnologias
+              const logosContainer = clone.querySelector('.projeto_logos');
+              if (projeto.tecnologias && projeto.tecnologias.length > 0) {
+                  projeto.tecnologias.forEach(tecnologia => {
+                      const img = document.createElement('img');
+                      img.src = tecnologia.icone || 'assets/img/default-icon.png';
+                      img.alt = tecnologia.nome || 'Tecnologia desconhecida';
+                      img.title = tecnologia.nome || 'Tecnologia desconhecida';
+                      logosContainer.appendChild(img);
+                  });
+              } else {
+                  logosContainer.innerHTML = '<p>Tecnologias não disponíveis</p>';
+              }
+
+              projetosContainer.appendChild(clone);
+          });
+      })
+      .catch(error => {
+          console.error('Erro ao carregar os projetos:', error);
+          projetosContainer.innerHTML = '<p>Erro ao carregar os projetos. Tente novamente mais tarde.</p>';
+          verTodosProjetosBtn.style.display = 'none';
+      });
+
+  verTodosProjetosBtn.addEventListener('click', () => {
+      window.location.href = 'todos_projetos.html';
+  });
+});
