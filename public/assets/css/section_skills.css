@@ -1,0 +1,247 @@
+.skills-section {
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eeeeee;
+    color: #000;
+}
+
+.container {
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: -30px;
+    margin-bottom: 60px;
+}
+
+.circle {
+    width: 190px;
+    height: 190px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    background-color: #fff;
+    position: relative;
+    margin: 0 -12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Java sendo a principal */
+.circle.main {
+    width: 220px;
+    height: 220px;
+    border: 2px solid #000;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animações para cada círculo */
+.circle:hover {
+    transform: translateY(-10px);
+}
+
+.circle.main:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Cores específicas para cada tecnologia no hover */
+.circle.java:hover {
+    background-color: #f89820;
+    color: white;
+}
+
+.circle.spring:hover {
+    background-color: #6db33f;
+    color: white;
+}
+
+.circle.postgresql:hover {
+    background-color: #336791;
+    color: white;
+}
+
+.circle.hibernate:hover {
+    background-color: #bcae79;
+    color: white;
+}
+
+.circle.docker:hover {
+    background-color: #2496ed;
+    color: white;
+}
+
+.description {
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Animação de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skills-section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+
+/* Media Queries para Responsividade */
+/* Tablets (até 1024px) */
+@media screen and (max-width: 1024px) {
+    .circle {
+        width: 150px;
+        height: 150px;
+        font-size: 0.8rem;
+    }
+    
+    .circle.main {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* Tablets menores (até 768px) */
+@media screen and (max-width: 768px) {
+    .skills-section h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Dispositivos móveis (até 600px) */
+@media screen and (max-width: 620px) {
+    .skills-section {
+        padding: 40px 0;
+    }
+    
+    .circles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .circle {
+        width: 180px;
+        height: 180px;
+        margin: 0;
+        font-size: 0.8rem;
+    }
+    
+    .circle.main {
+        width: 180px;
+        height: 180px;
+        order: -1; /* Coloca Java no topo quando em coluna */
+    }
+    
+    .skills-section  h2 {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+    
+    .description {
+        font-size: 0.9rem;
+        padding: 0 20px;
+    }
+    
+    /* Ajuste nas animações para mobile */
+    .circle:hover {
+        transform: translateY(-5px);
+    }
+    
+    .circle.main:hover {
+        transform: translateY(-8px) scale(1.03);
+    }
+}
+
+/* Dispositivos móveis muito pequenos (até 400px) */
+@media screen and (max-width: 400px) {
+
+    .circles{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .circle {
+        width: 180px;
+        height: 180px;
+        font-size: 0.75rem;
+    }
+    
+    
+    .skills-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .description {
+        font-size: 0.85rem;
+    }
+}
+
+/* Ajuste para altura da tela pequena */
+@media screen and (max-height: 700px) {
+    .skills-section {
+        padding: 30px 10px;
+    }
+    
+    .circles {
+        margin-bottom: 30px;
+    }
+}
+
+/* Suporte para telas muito grandes */
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .circle {
+        width: 220px;
+        height: 220px;
+        font-size: 1rem;
+    }
+    
+    .circle.main {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Prevenção de hover em dispositivos touch */
+@media (hover: none) {
+    .circle:hover {
+        transform: none;
+        background-color: inherit;
+        color: inherit;
+    }
+    
+    .circle.main:hover {
+        transform: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+}

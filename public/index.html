@@ -11,8 +11,12 @@
 
   <title>Uanderson Ferreira de Oliveira</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-  <link rel="stylesheet" href="assets/css/style_hidden.css" />
-  <link rel="stylesheet" href="assets/css/vertical-timeline_hidden.css" />
+  
+  <link rel="stylesheet" href="assets/css/hidden/style_hidden.css" />
+  <link rel="stylesheet" href="assets/css/hidden/vertical-timeline_hidden.css" />
+  <link rel="stylesheet" href="assets/css/hidden/section_skills_hidden.css" />
+
+
 </head>
 
 <body>
@@ -23,6 +27,7 @@
       <li><a class="link-destaque" href="/#banner" onclick="toggleMenu();">Home</a></li>
       <li><a class="link-destaque" href="/#sobre" onclick="toggleMenu();">Sobre</a></li>
       <li><a class="link-destaque" href="/#projetos" onclick="toggleMenu();">Projetos</a></li>
+      <li><a class="link-destaque" href="/#experiencia" onclick="toggleMenu();">Experiência</a></li>
       <li><a class="link-destaque" href="/#contato" onclick="toggleMenu();">Contato</a></li>
     </ul>
   </header>
@@ -65,7 +70,7 @@
           </div>
         </aside>
         <article class="about-col-right">
-          <h2 class="about-title-text">#<span>S</span>obre mim 🚀</h2>
+          <h2 class="about-title-text"><span>#S</span>obre mim 🚀</h2>
           <p>
             Sou um jovem de 22 anos, crescido numa cidade pequena do estado de
             Minas Gerais e que se mudou para o Tocantins em 2018 com minha
@@ -126,7 +131,7 @@
 
     <!-- Projetos INICIO -->
     <section class="section-projetos" id="projetos">
-      <h2 class="about-title-text">#<span>M</span>eus projetos 🚀</h2>
+      <h2 class="about-title-text"><span>#M</span>eus projetos 🚀</h2>
 
       <!-- Template para cada projeto -->
       <template id="projeto_template">
@@ -160,10 +165,8 @@
       <!-- Container para os projetos -->
       <div class="projetos-wrapper">
         <div class="projetos" id="projetos">
-          <!-- Projetos serão inseridos aqui via JavaScript -->
         </div>
 
-        <!-- Botão de ver todos sempre será o último elemento -->
         <div class="ver-todos-container">
           <button id="ver_todos_projetos" class="projeto_btn">Ver Todos os Projetos</button>
         </div>
@@ -175,7 +178,7 @@
     <section class="experiencia" id="experiencia">
 
       <div class="title">
-        <h2 class="about-title-text"><span>E</span>xperiência profissional </h2>
+        <h2 class="about-title-text"><span>#E</span>xperiência profissional </h2>
       </div>
 
       <div class="timeline__container">
@@ -220,10 +223,28 @@
     </section>
     <!--Seção de Experiência profissional FIM -->
 
+    <!-- Principais Competências Técnicas INICIO -->
+    <section class="skills-section">
+      <div class="container">
+        <h2 class="about-title-text"><span>#P</span>rincipais Competências <br> Técnicas</h2> 
+          <div class="circles">
+              <div class="circle postgresql"><span>PostgreSQL</span></div>
+              <div class="circle hibernate"><span>Hibernate</span></div>
+              <div class="circle main java"><span>Java</span></div>
+              <div class="circle spring"><span>Spring Boot</span></div>
+              <div class="circle docker"><span>Docker</span></div>
+          </div>
+          <p class="description">
+              Especializado em desenvolvimento back-end Java com sólida base em Spring Boot, gerenciamento de banco de dados e conteinerização.
+          </p>
+      </div>
+  </section>
+    <!-- Principais Competências Técnicas FIM -->
+
 
     <!-- Seção de Contato INICIO -->
     <section class="contato" id="contato">
-      <h2 class="about-title-text"><span>C</span>ontate-me</h2>
+      <h2 class="about-title-text"><span>#C</span>ontate-me</h2>
       <div class="contato_container">
         <!-- Mapa e Formulário -->
         <div class="mapa_e_formulario">
@@ -300,7 +321,7 @@
 
   <footer class="copyrightText">
     <p>
-      Copyright &copy;2024 <a href="#">Uanderson Oliveira</a>. Todos os direitos reservados.
+      Copyright &copy;2024 <a href="#">Uanderson Ferreira de Oliveira</a>. Todos os direitos reservados.
     </p>
   </footer>
 
