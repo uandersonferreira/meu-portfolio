@@ -1,12 +1,7 @@
-let Octokit;
+// update-projects.js
+const { Octokit } = require("@octokit/rest");
 
 exports.handler = async function(event, context) {
-  // Dynamic import of Octokit
-  const { Octokit: OctokitClass } = await import("@octokit/rest");
-  Octokit = OctokitClass;
-
-  require('dotenv').config();
-
   if (event.httpMethod !== "POST") {
     return { 
       statusCode: 405, 
@@ -21,50 +16,62 @@ exports.handler = async function(event, context) {
 
     const { projeto } = JSON.parse(event.body);
 
+    if (!projeto) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: "Dados do projeto não fornecidos" })
+      };
+    }
+
     let projetos = [];
     let fileData;
     
     try {
-      // Obtém o conteúdo atual do arquivo projetos.json
+      // Tenta obter o conteúdo atual
       const response = await octokit.repos.getContent({
         owner: process.env.GITHUB_OWNER,
         repo: process.env.GITHUB_REPO,
-        path: 'projetos.json'
+        path: 'projetos.json',
+        ref: 'main' // ou o branch correto
       });
       
       fileData = response.data;
-      const content = Buffer.from(fileData.content, 'base64').toString();
+      const content = Buffer.from(fileData.content, 'base64').toString('utf8');
       projetos = JSON.parse(content);
 
-      // Cria uma cópia de segurança do arquivo atual
+      // Cria backup
       await octokit.repos.createOrUpdateFileContents({
         owner: process.env.GITHUB_OWNER,
         repo: process.env.GITHUB_REPO,
-        path: 'projetos-backup.json', // Caminho do arquivo de backup
-        message: 'Backup do arquivo projetos.json antes de atualização',
-        content: fileData.content, // Usa o conteúdo atual do arquivo como está
-        sha: undefined // Não é necessário SHA para criar um novo arquivo ou sobrescrever
+        path: 'projetos-backup.json',
+        message: 'Backup do arquivo projetos.json',
+        content: fileData.content,
+        branch: 'main'
       });
 
     } catch (error) {
+      if (error.status !== 404) { // Se não for erro "não encontrado"
+        throw error;
+      }
       console.log('Arquivo não encontrado, criando novo');
     }
 
-    // Adiciona o novo projeto na lista
+    // Adiciona novo projeto
     projetos.push({
       ...projeto,
       id: Date.now(),
       dataCriacao: new Date().toISOString()
     });
 
-    // Atualiza o arquivo projetos.json com o novo conteúdo
+    // Atualiza arquivo principal
     await octokit.repos.createOrUpdateFileContents({
       owner: process.env.GITHUB_OWNER,
       repo: process.env.GITHUB_REPO,
       path: 'projetos.json',
       message: 'Adiciona novo projeto via Netlify Function',
       content: Buffer.from(JSON.stringify(projetos, null, 2)).toString('base64'),
-      sha: fileData?.sha // Atualiza o arquivo usando a SHA atual
+      sha: fileData?.sha,
+      branch: 'main'
     });
 
     return {
@@ -72,10 +79,13 @@ exports.handler = async function(event, context) {
       body: JSON.stringify({ message: "Projeto adicionado com sucesso" })
     };
   } catch (error) {
-    console.error('Erro:', error);
+    console.error('Erro detalhado [UPDATE-PROJECTS]:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "Erro ao salvar projeto" })
+      body: JSON.stringify({ 
+        error: "Erro ao salvar projeto [UPDATE-PROJECTS]",
+        details: error.message 
+      })
     };
   }
 };

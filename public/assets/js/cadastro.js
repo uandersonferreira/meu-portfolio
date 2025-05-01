@@ -97,7 +97,13 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
 
+        const submitButton = form.querySelector('button[type="submit"]');
+
+
         try {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Salvando...';
+
             const imagemCapa = document.getElementById('imagem').files[0];
             if (!imagemCapa) {
                 alert('Por favor, selecione uma imagem de capa para o projeto');
@@ -125,15 +131,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 body: JSON.stringify({ projeto })
             });
 
+            const result = await response.json();
+
             if (!response.ok) {
-                throw new Error('Erro ao salvar projeto');
-            }
+                throw new Error(result.error || 'Erro ao salvar projeto');
+              }
 
             alert('Projeto cadastrado com sucesso!');
             window.location.href = 'index.html';
         } catch (error) {
             console.error('Erro:', error);
-            alert('Erro ao cadastrar projeto');
+            alert('Erro ao cadastrar projeto [CADASTRO]: ' + error.message);
+        } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = 'Salvar Projeto';
         }
     });
 });
